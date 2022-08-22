@@ -17,7 +17,7 @@ a {
 }
 /* Header */
 .header-section {
-  padding: 30px 50px;
+  padding: 30px 15%;
   display: flex;
   justify-content: space-between;
   background-color: #1f2937;
@@ -47,7 +47,7 @@ a {
   height: 50vh;
   background-color: #1f2937;
   color: #f9faf8;
-  padding: 50px;
+  padding: 50px 15%;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -89,6 +89,7 @@ a {
   max-width: 80%;
   height: auto;
   border-radius: 10px;
+  transition: .2s ease-in;
 }
 
 /* Section two */
@@ -122,15 +123,25 @@ a {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+.image-placeholder{
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 .card img {
   object-fit: cover;
-  border-radius: 10px;
   width: 300px;
   height: 200px;
-  margin-bottom: 10px;
+  
+  transition: .2s ease-in;
 }
 .card p {
   text-align: center;
+}
+
+.image-placeholder:hover img{
+  transform: scale(1.1);
 }
 
 /* Section three */
@@ -196,13 +207,14 @@ a {
 @media(max-width:700px){
   .section-one{
     flex-direction: column;
+    flex-direction: column-reverse;
+    overflow: hidden;
   }
   .section-one-right{
     justify-content: flex-start;
   }
   .section-one img{
-    width: 50%;
-    object-fit: cover;
+    width: 500px;
   }
   
 }
